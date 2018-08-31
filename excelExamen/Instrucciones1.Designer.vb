@@ -29,9 +29,9 @@ Partial Class Instrucciones1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 250)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Instrucciones1"
-        Me.Text = "Instrucciones1"
+        Me.Text = "Examen Microsoft Excel - CI"
         Me.ResumeLayout(False)
 
     End Sub

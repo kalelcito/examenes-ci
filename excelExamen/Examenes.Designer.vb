@@ -28,14 +28,17 @@ Partial Class excel
         '
         'initExcel
         '
+        Me.initExcel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.initExcel.BackColor = System.Drawing.Color.Green
         Me.initExcel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.initExcel.FlatAppearance.BorderSize = 0
         Me.initExcel.ForeColor = System.Drawing.Color.White
-        Me.initExcel.Location = New System.Drawing.Point(150, 50)
+        Me.initExcel.Location = New System.Drawing.Point(40, 40)
         Me.initExcel.Margin = New System.Windows.Forms.Padding(0)
         Me.initExcel.Name = "initExcel"
-        Me.initExcel.Size = New System.Drawing.Size(100, 50)
+        Me.initExcel.Size = New System.Drawing.Size(200, 50)
         Me.initExcel.TabIndex = 0
         Me.initExcel.Text = "Examen Excel"
         Me.initExcel.UseVisualStyleBackColor = False
@@ -44,10 +47,11 @@ Partial Class excel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 361)
+        Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.initExcel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "excel"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Examenes - CI"
         Me.ResumeLayout(False)
 
