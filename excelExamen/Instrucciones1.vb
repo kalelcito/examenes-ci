@@ -18,14 +18,29 @@ Public Class Instrucciones1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim sheet As Microsoft.Office.Interop.Excel.Worksheet
-        Dim punto1 = 0
         sheet = wb.ActiveSheet
+        Dim punto1 = 0
+        Dim punto2 = 0
+        Dim f As String
+        Dim c As String
+
         For i As Integer = 4 To 10
-            If (sheet.Range("E" + i).Formula) Then
+            f = sheet.Cells(i, 5).Formula
+            c = "=C" & i & "*D" & i
+            If String.Compare(f, c) = 0 Then
                 punto1 = punto1 + 1
             End If
         Next
-        MessageBox.Show("Califiacion: " + Format(punto1 / 7, "0.0"))
+        For i As Integer = 4 To 10
+            f = sheet.Cells(i, 5).Style.NumberFormat
+            If (f.Contains("#,##0.00")) Then
+                punto2 = punto2 + 1
+            End If
+        Next
+        MessageBox.Show("RESULTADOS" + Environment.NewLine + Environment.NewLine +
+                        "Punto 1: " + Format((punto1 / 7) * 10, "0.0") + Environment.NewLine +
+                        "Punto 2: " + Format((punto2 / 7) * 10, "0.0") + Environment.NewLine +
+                        "Punto 3: ")
     End Sub
 
     Function Test(ByRef sName As String) As Boolean

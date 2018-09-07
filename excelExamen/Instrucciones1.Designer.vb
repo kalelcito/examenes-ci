@@ -25,6 +25,7 @@ Partial Class Instrucciones1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Instrucciones1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -50,12 +51,24 @@ Partial Class Instrucciones1
         Me.Button1.Text = "Enviar"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Label2
+        '
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(31, 51)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(339, 31)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "2.-Colocar formato de millares a la columna de Precio para que las cantidades ten" &
+    "gan 2 decimales y separador de miles."
+        '
         'Instrucciones1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(600, 250)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -69,4 +82,5 @@ Partial Class Instrucciones1
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label2 As Label
 End Class
