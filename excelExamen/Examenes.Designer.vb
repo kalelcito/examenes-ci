@@ -24,6 +24,7 @@ Partial Class excel
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(excel))
         Me.initExcel = New System.Windows.Forms.Button()
+        Me.initWord = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'initExcel
@@ -43,11 +44,29 @@ Partial Class excel
         Me.initExcel.Text = "Examen Excel"
         Me.initExcel.UseVisualStyleBackColor = False
         '
+        'initWord
+        '
+        Me.initWord.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.initWord.BackColor = System.Drawing.Color.DodgerBlue
+        Me.initWord.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.initWord.FlatAppearance.BorderSize = 0
+        Me.initWord.ForeColor = System.Drawing.Color.White
+        Me.initWord.Location = New System.Drawing.Point(42, 105)
+        Me.initWord.Margin = New System.Windows.Forms.Padding(0)
+        Me.initWord.Name = "initWord"
+        Me.initWord.Size = New System.Drawing.Size(200, 50)
+        Me.initWord.TabIndex = 1
+        Me.initWord.Text = "Examen Word"
+        Me.initWord.UseVisualStyleBackColor = False
+        '
         'excel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.initWord)
         Me.Controls.Add(Me.initExcel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "excel"
@@ -58,4 +77,5 @@ Partial Class excel
     End Sub
 
     Friend WithEvents initExcel As Button
+    Friend WithEvents initWord As Button
 End Class

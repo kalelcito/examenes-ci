@@ -95,8 +95,8 @@ Public Class Instrucciones1
 
         'Pregunta 2
         For i As Integer = 4 To 10
-            If sheet.Cells(i, 5).Value IsNot Nothing Then
-                f = sheet.Cells(i, 5).Style.NumberFormat
+            If sheet.Cells(i, 4).Value IsNot Nothing Then
+                f = sheet.Cells(i, 4).Style.NumberFormat
                 If (f.Contains("#,##0.00")) Then
                     punto2 = punto2 + 1
                 End If
@@ -318,14 +318,18 @@ Public Class Instrucciones1
 
             Dim nombre As String
             Try
-                nombre = InputBox("Ingresa tu Nombre.", "Datos Personales - CI")
+                Do While String.Compare(nombre, "")
+                    nombre = InputBox("Ingresa tu Nombre.", "Datos Personales - CI")
+                Loop
             Catch
                 MsgBox("Ingresa tu Nombre.")
             End Try
 
             Dim matricula As String
             Try
-                matricula = InputBox("Ingresa tu Matricula.", "Datos Personales - CI")
+                Do While String.Compare(matricula, "")
+                    matricula = InputBox("Ingresa tu Matricula.", "Datos Personales - CI")
+                Loop
             Catch
                 MsgBox("Ingresa tu Matricula.")
             End Try
@@ -336,8 +340,6 @@ Public Class Instrucciones1
             Cerrar_Click()
         End If
     End Sub
-
-
 
     Function Test(ByRef sName As String) As Boolean
         Dim fs As FileStream
@@ -377,9 +379,4 @@ Public Class Instrucciones1
             End If
         End If
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-    End Sub
-
 End Class

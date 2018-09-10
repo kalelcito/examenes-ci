@@ -53,6 +53,9 @@
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -91,6 +94,12 @@
     <Compile Include="Instrucciones1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Instrucciones2.Designer.vb">
+      <DependentUpon>Instrucciones2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Instrucciones2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -113,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Instrucciones1.resx">
       <DependentUpon>Instrucciones1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrucciones2.resx">
+      <DependentUpon>Instrucciones2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
