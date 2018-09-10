@@ -7,11 +7,11 @@ Public Class excel
         If My.Computer.Network.IsAvailable Then
             Descargar()
             Me.Hide()
-            Instrucciones1.Width = Screen.PrimaryScreen.Bounds.Width / 2
-            Instrucciones1.Height = Screen.PrimaryScreen.Bounds.Height / 3.5
+            Instrucciones1.Width = Screen.PrimaryScreen.Bounds.Width / 1.8
+            Instrucciones1.Height = Screen.PrimaryScreen.Bounds.Height / 4
             Instrucciones1.Show()
         Else
-            MsgBox("Computadora Sin Conexión a Internet.")
+            MsgBox("Computadora Sin Conexión a Internet. Para realizar este Examen requiere conexión a Internet.")
         End If
     End Sub
 
