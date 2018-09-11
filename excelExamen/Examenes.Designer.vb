@@ -60,6 +60,7 @@ Partial Class excel
         Me.initWord.TabIndex = 1
         Me.initWord.Text = "Examen Word"
         Me.initWord.UseVisualStyleBackColor = False
+        Me.initWord.Visible = False
         '
         'excel
         '

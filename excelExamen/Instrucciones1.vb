@@ -14,7 +14,7 @@ Public Class Instrucciones1
         "6.- Calcular el Precio final del producto Tomando en cuenta el Precio con descuento, menos el impuesto trasladado y el Impuesto Aeropuerto.",
         "7.- En la fila 11 agrega una fila para calcular los totales de cada columna  (C a la I).",
         "8.- Coloca el estilo de Celda""Enfasis 6"" a las  celdas de  los títulos de la fila 3 y a los totales de la fila 11.",
-        "9.- Agrega bordes de color verde a la tabla del Rango A3:I10.",
+        "9.- Agrega bordes de color ""Verde, Enfasis 6"" a la tabla del Rango A3:I10.",
         "10.- Inserta una columna antes del precio final, reduce el ancho de la columna a 3. Agregale un color de fondo."
     }
 
@@ -316,23 +316,35 @@ Public Class Instrucciones1
             '            "Punto 9: " + Format((punto9 / 80) * 10, "0.0") + Environment.NewLine +
             '            "Punto 10: " + Format((punto10 / 10) * 10, "0.0") + Environment.NewLine,, "RESULTADOS")
 
-            Dim nombre As String
-            Try
-                Do While String.Compare(nombre, "")
-                    nombre = InputBox("Ingresa tu Nombre.", "Datos Personales - CI")
-                Loop
-            Catch
-                MsgBox("Ingresa tu Nombre.")
-            End Try
+            'Dim nombre As String
+            'Try
+            '    Do While String.Compare(nombre, "")
+            '        nombre = InputBox("Ingresa tu Nombre.", "Datos Personales - CI")
+            '    Loop
+            'Catch
+            '    MsgBox("Ingresa tu Nombre.")
+            'End Try
 
+            'Dim matricula As String
+            'Try
+            '    Do While String.Compare(matricula, "")
+            '        matricula = InputBox("Ingresa tu Matricula.", "Datos Personales - CI")
+            '    Loop
+            'Catch
+            '    MsgBox("Ingresa tu Matricula.")
+            'End Try
+            Dim nombre As String
             Dim matricula As String
-            Try
-                Do While String.Compare(matricula, "")
-                    matricula = InputBox("Ingresa tu Matricula.", "Datos Personales - CI")
-                Loop
-            Catch
-                MsgBox("Ingresa tu Matricula.")
-            End Try
+            nombre = InputBox("Ingresa tu Nombre.", "Datos Personales - CI")
+            matricula = InputBox("Ingresa tu Matricula.", "Datos Personales - CI")
+
+            Do While nombre = ""
+                nombre = InputBox("Ingresa tu Nombre.", "Datos Personales - CI")
+            Loop
+
+            Do While matricula = ""
+                matricula = InputBox("Ingresa tu Matricula.", "Datos Personales - CI")
+            Loop
 
             Dim webAddress As String = "https://capacitacioninformatica.com/examenes/" + nombre + "/" + matricula + "/" + Format((punto1 / 7) * 10, "0.0") + "/" + Format((punto2 / 7) * 10, "0.0") + "/" + Format((punto3 / 7) * 10, "0.0") + "/" + Format((punto4 / 7) * 10, "0.0") + "/" + Format((punto5 / 7) * 10, "0.0") + "/" + Format((punto6 / 8) * 10, "0.0") + "/" + Format((punto7 / 7) * 10, "0.0") + "/" + Format((punto8 / 18) * 10, "0.0") + "/" + Format((punto9 / 80) * 10, "0.0") + "/" + Format((punto10 / 10) * 10, "0.0")
             Process.Start(webAddress)
